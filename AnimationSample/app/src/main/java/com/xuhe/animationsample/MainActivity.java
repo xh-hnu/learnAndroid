@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,9 +29,13 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.alpha_btn:
                 //todo
+                mAnimation = AnimationUtils.loadAnimation(this, R.anim.alpha_anim);
+                cardView.startAnimation(mAnimation);
                 break;
             case R.id.translate_btn:
                 //todo
+                mAnimation = AnimationUtils.loadAnimation(this, R.anim.translate_anim);
+                cardView.startAnimation(mAnimation);
                 break;
             case R.id.rotate_btn:
                 mAnimation = AnimationUtils.loadAnimation(this, R.anim.rotate_anim);

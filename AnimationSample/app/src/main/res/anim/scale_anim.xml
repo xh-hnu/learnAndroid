@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scale xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="700"
+    android:fromXScale="0.0"
+    android:toXScale="1.0"
+    android:fromYScale="0.0"
+    android:toYScale="1.0"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:repeatCount="4"
+    android:repeatMode="reverse"/>
+
+<!-- pivotX 动画X轴起点 50 50% 50%p
+    如果为数值的话，表示当前控件左上角(原点)加上50px
+    如果是百分比，表示当前控件原点加上控件视图宽度的50%
+    如果是百分比+p，表示当前控件原点加上父控件视图宽度的50% -->
+
+<!--
+1、scale  alpha  translate  rotate 都是Animation 的子类
+2、Animation 类的属性有
+duration
+fillAfter：如果为true，控件动画结束时，将保持动画最后的状态
+fillBefore：如果为true，控件动画结束时，将还原动画开始的状态
+fillEnabled：与fillBefore效果一样
+repeatCount：重复次数
+repeatMode：重复模式，有reverse和restart两种，reverse表示倒序回放，restart表示重新开始，必须与repeatCount一起使用
+interpolator：设定插值器
+-->
